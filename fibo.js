@@ -11,7 +11,7 @@ function fibn (number) {
 }
 
 function fibsRec(number, current = 0, arr = []) {
-    if(number <= current) { arr[number] = current; return arr; }
+    if(number <= current) return arr;
     if(arr.length < 2) arr.push(current);
     else arr.push(Number(arr[current-2]) + Number(arr[current-1]));
     return fibsRec(number, ++current, arr);
