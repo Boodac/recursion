@@ -3,9 +3,7 @@ function mergeSort(array) {
     let halfway = Math.floor(array.length / 2);
     let firstHalf = array.slice(0,halfway);
     let secondHalf = array.slice(halfway);
-    let sortedLeft = mergeSort(firstHalf);
-    let sortedRight = mergeSort(secondHalf);
-    return merge(sortedLeft, sortedRight);
+    return merge(mergeSort(firstHalf), mergeSort(secondHalf));
 }
 
 function merge(left, right) {
