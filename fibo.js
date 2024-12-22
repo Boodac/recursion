@@ -16,5 +16,3 @@ function fibsRec(number, current = 0, arr = []) {
     else arr.push(Number(arr[current-2]) + Number(arr[current-1]));
     return fibsRec(number, ++current, arr);
 }
-
-console.log(fibsRec(8));
